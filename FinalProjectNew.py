@@ -125,7 +125,7 @@ class AddressBook(UserDict):
         self.data[record.name.value] = record  # 'Sasha': record
 
     def save(self):
-        with open("../phone_book.txt", 'wb') as file:
+        with open(f"{self.filename}", 'wb') as file:
             pickle.dump(self.data, file)
 
     def load(self):
